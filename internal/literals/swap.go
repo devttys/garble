@@ -9,7 +9,7 @@ import (
 	"math"
 	mathrand "math/rand"
 
-	ah "mvdan.cc/garble/internal/asthelper"
+	ah "github.com/devttys/garble/internal/asthelper"
 )
 
 type swap struct{}
@@ -23,8 +23,6 @@ func getIndexType(dataLen int) string {
 		return "byte"
 	case dataLen <= math.MaxUint16:
 		return "uint16"
-	case dataLen <= math.MaxUint32:
-		return "uint32"
 	default:
 		return "uint64"
 	}
